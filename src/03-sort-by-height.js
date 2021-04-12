@@ -20,15 +20,17 @@ function sortByHeight(arr) {
   const sorted = newArr.sort((a, b) => a - b);
 
   const result = [];
+  let temp = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    let temp = 0;
     if (arr[i] !== -1) {
       result.splice(i, 0, sorted[temp]);
       temp++;
+    } else {
+      result.splice(i, 0, -1);
     }
   }
-  console.log(result);
+  return result;
 }
 
 module.exports = sortByHeight;
