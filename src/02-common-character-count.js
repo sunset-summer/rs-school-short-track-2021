@@ -18,7 +18,6 @@ function getCommonCharacterCount(s1, s2) {
       if (arr1[i] === arr2[k]) {
         result++;
         arr2.splice(k, 1);
-        console.log(arr2);
         break;
       }
     }
